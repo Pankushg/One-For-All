@@ -1,0 +1,11 @@
+<div>
+    <h2 class="heading">List Of Tasks : </h2>
+    <ul class="tasks">
+      <li *ngFor="let task of tasks"
+        (click)="onSelect(task)">
+        <a>
+          <span class="badge">{{task.id}}</span> {{task.name}}
+        </a>
+      </li>
+    </ul>
+</div>

@@ -2,9 +2,8 @@
 
 <div>
     <ul class="tasks">
-      <li *ngFor="let task of tasks"
-        (click)= "onSelect(task)">
-        <a routerLink="/{{task.id}}">
+      <li *ngFor="let task of tasks">
+        <a routerLink="/details/{{task.id}}">
           <span class="badge">{{task.id}}</span> {{task.name}}
         </a>
       </li>

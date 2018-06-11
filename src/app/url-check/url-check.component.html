@@ -1,3 +1,14 @@
-<p>
-  url-check works!
-</p>
+<div style=" margin-left:50px;width:50%">
+  <table style="text-align:center" class="table table-bordered">
+          <tr>
+            <th style="text-align:center">URL</th>
+            <th style="text-align:center">Response Code</th> 
+            <th style="text-align:center">Response Desc</th> 
+          </tr>
+          <tr style="text-align:center" *ngFor = "let url of urls">
+            <td>{{url.url}}</td>        
+            <td>{{url.responseCode}}</td>
+            <td>{{url.responseDesc}}</td> 
+          </tr>
+  </table>
+  </div>

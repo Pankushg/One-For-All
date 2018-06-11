@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Url } from '../url';
+import { UrlService } from '../url.service'
 
 @Component({
   selector: 'app-url-check',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UrlCheckComponent implements OnInit {
 
-  constructor() { }
+  urls : Url[];
+
+  constructor(private urlService : UrlService) { }
 
   ngOnInit() {
+    this.getUrlInfo();
+  }
+
+  getUrlInfo(){
+    return this.urlService.getUrlInfo()
+      .subscribe(url => this.urls = url);
   }
 
 }

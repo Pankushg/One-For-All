@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Folder } from '../folder';
+import { FolderService } from '../folder.service';
 
 @Component({
   selector: 'app-folder-check',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FolderCheckComponent implements OnInit {
 
-  constructor() { }
+  folders : Folder[];
+  constructor(private folderService : FolderService) { }
 
   ngOnInit() {
+    this.getFolders();
+  }
+  
+  getFolders(): void {
+    this.folderService.getFolders()
+        .subscribe(folders => this.folders = folders);
   }
 
 }

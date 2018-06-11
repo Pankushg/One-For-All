@@ -1,5 +1,14 @@
 <h2>Folder Checking !!!</h2>
 
 <div>
-  <h3>Ga016vk001/Datatrans/Inbound</h3>
+    <h3>Ga016vk001/Datatrans/Inbound</h3>   
  
+      <table style="width:100%">
+          <tr>
+            <th>Firstname</th>
+            <th>Lastname</th> 
+          </tr>
+          <tr *ngFor = "let folder of folders">
+            <td>{{folder.count}}</td>
+            <td>{{folder.name}}</td> 
+          </tr>

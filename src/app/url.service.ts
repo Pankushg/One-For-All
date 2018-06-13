@@ -8,7 +8,7 @@ import { Observable, of } from 'rxjs';
 })
 export class UrlService {
 
-  private urlInfoUrl = 'http://10.23.16.88:17051/api/url';  
+  private urlInfoUrl = 'http://localhost:56111/api/url';  
   constructor(private http: HttpClient) { }
 
   getUrlInfo () : Observable<Url[]>{

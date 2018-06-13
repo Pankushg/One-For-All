@@ -7,7 +7,7 @@ import { Observable, of } from 'rxjs';
   providedIn: 'root'
 })
 export class FolderService {
-  private folderUrl = 'http://10.23.16.88:17051/api/folder';
+  private folderUrl = 'http://localhost:56111/api/folder';
   constructor(private http: HttpClient) { }
   
   getFolders(): Observable<Folder[]> {

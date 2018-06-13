@@ -1,3 +1,27 @@
-<p>
-  archvjob-check works!
-</p>
+<h2 (click)="getArchvsImp()">Import</h2>
+<div style=" margin-left:50px;width:50%">
+  <table style="text-align:center" class="table table-bordered">
+          <tr>
+            <th style="text-align:center">Count</th>
+            <th style="text-align:center">Date</th> 
+          </tr>
+          <tr style="text-align:center" *ngFor = "let archv of impArchvs">
+            <td>{{archv.archvCnt}}</td>        
+            <td>{{archv.archvDttm}}</td> 
+          </tr>
+  </table>
+  </div>
+
+  <h2 (click)="getArchvsXp()">Xport</h2>
+  <div style=" margin-left:50px;width:50%">
+    <table style="text-align:center" class="table table-bordered">
+            <tr>
+              <th style="text-align:center">Count</th>
+              <th style="text-align:center">Date</th> 
+            </tr>
+            <tr style="text-align:center" *ngFor = "let archv of xpArchvs">
+              <td>{{archv.archvCnt}}</td>        
+              <td>{{archv.archvDttm}}</td> 
+            </tr>
+    </table>
+    </div>
